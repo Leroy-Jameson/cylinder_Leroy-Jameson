@@ -1,3 +1,7 @@
+import eu.mihosoft.vrl.v3d.CSG
+import eu.mihosoft.vrl.v3d.Cylinder
+import eu.mihosoft.vrl.v3d.Hexagon
+
 CSG simpleSyntax =new Cylinder(10,40).toCSG() // a one line Cylinder
 
 //create a Cylinder
@@ -20,4 +24,9 @@ CSG hex = new Hexagon(	20, // Flat to flat radius
                       		).toCSG()//convert to CSG to display                    			 
                       		.movex(50)
                       		.movey(50)
- return [simpleSyntax,myCylinder ,pyramid,hex]
+hex.setName("hex")
+simpleSyntax.setName("simpleSyntax")
+myCylinder.setName("myCylinder")
+pyramid.setName("pyramid")
+
+return [simpleSyntax,myCylinder ,pyramid,hex]
